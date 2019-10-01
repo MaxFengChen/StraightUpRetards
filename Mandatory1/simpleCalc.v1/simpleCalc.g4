@@ -6,6 +6,7 @@ start   : e=expr EOF ;
 
 expr	: e1=expr '+' e2=expr # Addition
 	| e1=expr '*' e2=expr # Multiplication
+	| e1=expr '-' e2=expr # Subtraction
 	| c=FLOAT     	      # Constant
 	| x=ID		      # Variable
 	| '(' e=expr ')'      # Parenthesis
